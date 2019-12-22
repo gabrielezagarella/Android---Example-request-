@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Server</string>
+    <string name="next">Next</string>
+    <string name="get">Get</string>
+    <string name="api">Api openweathermap Catania</string>
+    <string name="next2">Next</string>
+    <string name="get2">Get</string>
+    <string name="api2">Example get json</string>
+</resources>
