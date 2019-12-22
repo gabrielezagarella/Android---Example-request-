@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
         //String url = "https://api.myjson.com/bins/kp9wz";
         String url = "https://api.openweathermap.org/data/2.5/weather?q=Catania,Italy&appid=5360a3c3ac8bf01b8d0c14ef27072b7c";
+        //String url = "http://localhost:4005/films";
 
                 Request request = new Request.Builder()
                 .url(url)

@@ -6,4 +6,6 @@
     <string name="next2">Next</string>
     <string name="get2">Get</string>
     <string name="api2">Example get json</string>
+    <string name="api3">api value</string>
+    <string name="getHTML">get HTML</string>
 </resources>

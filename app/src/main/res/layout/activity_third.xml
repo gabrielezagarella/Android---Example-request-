@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text_view_result2"
+        android:id="@+id/text_view_result3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -29,24 +29,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/get2"
+            android:id="@+id/get3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/get" />
         <Button
-            android:id="@+id/next2"
+            android:id="@+id/get3a"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next" />
+            android:layout_height="match_parent"
+            android:text="@string/getHTML" />
+
+
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/api2"
+        android:text="@string/api3"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
