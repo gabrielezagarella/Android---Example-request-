@@ -2,6 +2,7 @@ package com.example.server;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
     private final String URL = "https://api.myjson.com/bins/fz8ir";
     private final String URL_string = "https://www.decodexlab.com/download/string.html";
     private RequestQueue queue;
-    private Button get3, getHTML3;
+    private Button get3, getHTML3, next3;
     private TextView textResult3;
 
     @Override
@@ -36,6 +37,7 @@ public class ThirdActivity extends AppCompatActivity {
         get3 = findViewById( R.id.get3 );
         getHTML3 = findViewById( R.id.get3a);
         textResult3 = findViewById( R.id.text_view_result3 );
+        next3 = findViewById(R.id.next3);
         queue = Volley.newRequestQueue( this );
 
         get3.setOnClickListener(new View.OnClickListener(){
@@ -54,6 +56,13 @@ public class ThirdActivity extends AppCompatActivity {
             getStringObject( URL_string );
         }
     });
+        next3.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next2 = new Intent( ThirdActivity.this, FourthActivity.class );
+                startActivity( next2 );
+            }
+        });
 }
         private void get(){
         JsonArrayRequest arrayRequest = new JsonArrayRequest( Request.Method.GET, URL,

@@ -8,4 +8,6 @@
     <string name="api2">Example get json</string>
     <string name="api3">api value</string>
     <string name="getHTML">get HTML</string>
+    <string name="get3">List teachers</string>
+    <string name="get3a">List students</string>
 </resources>

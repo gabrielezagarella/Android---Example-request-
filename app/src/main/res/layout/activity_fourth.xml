@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorbackground">
 
     <TextView
         android:id="@+id/text_view_result3"
@@ -14,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="20sp"
+        android:textColor="@color/colortextview"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="5dp" />
@@ -22,7 +25,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="520dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,33 +33,23 @@
 
         <Button
             android:id="@+id/get3"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="match_parent"
-            android:text="@string/get" />
+            android:layout_marginRight="05dp"
+            android:background="@drawable/button_gradient"
+            android:padding="05dp"
+            android:text="@string/get3"
+            android:textColor="@color/colortext" />
+
         <Button
             android:id="@+id/get3a"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="match_parent"
-            android:text="@string/getHTML" />
-        <Button
-            android:id="@+id/next3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next" />
-
-
+            android:background="@drawable/button_gradient"
+            android:padding="05dp"
+            android:text="@string/get3a"
+            android:textColor="@color/colortext" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginBottom="15dp"
-        android:text="@string/api3"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="15dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
