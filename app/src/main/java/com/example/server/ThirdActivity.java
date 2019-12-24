@@ -59,8 +59,8 @@ public class ThirdActivity extends AppCompatActivity {
         next3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next2 = new Intent( ThirdActivity.this, FourthActivity.class );
-                startActivity( next2 );
+                Intent next3 = new Intent( ThirdActivity.this, FourthActivity.class );
+                startActivity( next3 );
             }
         });
 }

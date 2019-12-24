@@ -11,7 +11,7 @@
     android:background="@color/colorbackground">
 
     <TextView
-        android:id="@+id/text_view_result3"
+        android:id="@+id/text_view_result4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/get3"
+            android:id="@+id/get4"
             android:layout_width="135dp"
             android:layout_height="match_parent"
             android:layout_marginRight="05dp"
@@ -42,13 +42,23 @@
             android:textColor="@color/colortext" />
 
         <Button
-            android:id="@+id/get3a"
+            android:id="@+id/get4a"
             android:layout_width="135dp"
             android:layout_height="match_parent"
             android:background="@drawable/button_gradient"
             android:padding="05dp"
             android:text="@string/get3a"
             android:textColor="@color/colortext" />
+
+        <Button
+            android:id="@+id/next4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_gradient"
+            android:padding="05dp"
+            android:text="@string/next"
+            android:textColor="@color/colortext"
+            android:layout_marginLeft="10dp"/>
 
     </LinearLayout>
 

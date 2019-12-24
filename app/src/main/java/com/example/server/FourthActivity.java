@@ -1,5 +1,6 @@
 package com.example.server;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,19 +30,20 @@ public class FourthActivity extends AppCompatActivity {
     private final String URLSTUDENTS = "http://192.168.43.156:3000/students";
     //private final String URL_string = "https://www.decodexlab.com/download/string.html";
     private RequestQueue queue;
-    private Button get3, getHTML3;
-    private TextView textResult3;
+    private Button get4, getHTML4, next4;
+    private TextView textResult4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_fourth );
-        get3 = findViewById( R.id.get3 );
-        getHTML3 = findViewById( R.id.get3a);
-        textResult3 = findViewById( R.id.text_view_result3 );
+        get4 = findViewById( R.id.get4 );
+        getHTML4 = findViewById( R.id.get4a);
+        textResult4 = findViewById( R.id.text_view_result4 );
+        next4 = findViewById(R.id.next4);
         queue = Volley.newRequestQueue( this );
 
-        get3.setOnClickListener(new View.OnClickListener(){
+        get4.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
@@ -50,14 +52,23 @@ public class FourthActivity extends AppCompatActivity {
         });
 
 
-        getHTML3.setOnClickListener(new View.OnClickListener(){
+        getHTML4.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
                 getstudents();
             }
-        });/*
-        getHTML3.setOnClickListener(new View.OnClickListener(){
+        });
+        next4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next4 = new Intent( FourthActivity.this, FifthActivity.class );
+                startActivity( next4 );
+            }
+        });
+
+        /*
+        getHTML4.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
@@ -76,7 +87,7 @@ public class FourthActivity extends AppCompatActivity {
                             try {
                                 JSONObject object = response.getJSONObject( i );
                                 //Log.d( "Items: ", object.getString( "name" ) + " / " + object.getString( "hours" ) );
-                                textResult3.append( object.getString( "fiscalCode") + "\n" + object.getString( "name" ) + " "
+                                textResult4.append( object.getString( "fiscalCode") + "\n" + object.getString( "name" ) + " "
                                         + object.getString( "surname" ) + "\n" + object.getString( "dateOfBirth") + "\n\n");
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -105,7 +116,7 @@ public class FourthActivity extends AppCompatActivity {
                             try {
                                 JSONObject object = response.getJSONObject( i );
                                 //Log.d( "Items: ", object.getString( "name" ) + " / " + object.getString( "hours" ) );
-                                textResult3.append( object.getString( "fiscalCode") + "\n" + object.getString( "name" ) + " "
+                                textResult4.append( object.getString( "fiscalCode") + "\n" + object.getString( "name" ) + " "
                                         + object.getString( "surname" ) + "\n" + object.getString( "dateOfBirth") + "\n\n");
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -130,7 +141,7 @@ public class FourthActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Log.d( "String: ", response.toString() );
-                        textResult3.append( response);
+                        textResult4.append( response);
                     }
                 },
                 new Response.ErrorListener() {
